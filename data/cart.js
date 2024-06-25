@@ -5,6 +5,7 @@ document.querySelectorAll('.add-to-cart-button').forEach((button) =>{
 
         const productId = button.dataset.productId;
         let matchingitem ;
+        let cartquantity = 0;
 
         cart.forEach((items) => {
             if(productId === items.Id){
@@ -21,5 +22,14 @@ document.querySelectorAll('.add-to-cart-button').forEach((button) =>{
             })
         }
         console.log(cart);
+
+        cart.forEach((items) => {
+            cartquantity += items.Quantity;
+            document.querySelector('.cart-quantity').innerHTML = cartquantity
+        })
+        
+        document.querySelector('.cart-quantity').innerHTML = cartquantity
     })
 })
+
+
