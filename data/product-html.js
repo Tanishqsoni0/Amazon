@@ -46,10 +46,10 @@ products.forEach((item) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary" data-product-name="${item.name}"
+          data-product-id="${item.id}">
             Add to Cart
           </button>
         </div>`
 })
-console.log(productsHTML)
 document.querySelector('.products-grid').innerHTML=productsHTML;
